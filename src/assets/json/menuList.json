@@ -1,0 +1,55 @@
+{
+    "menuList" : [
+        {
+            "id" : 1,
+            "title" : "인사관리",
+            "url" : "/",
+            "subMenu" : [
+                {
+                    "id" : 1,
+                    "title" : "subMenu1",
+                    "url" : "/",
+                    "subMenu" : []
+                },
+                {
+                    "id" : 2,
+                    "title" : "subMenu2",
+                    "url" : "/",
+                    "subMenu" : []
+                },
+                {
+                    "id" : 3,
+                    "title" : "subMenu3",
+                    "url" : "/",
+                    "subMenu" : [
+                        {
+                            "id" : 2,
+                            "title" : "subMenu2",
+                            "url" : "/",
+                            "subMenu" : []
+                        }       
+                    ]
+                }
+            ]
+        },
+        {
+            "id" : 2,
+            "title" : "전자결제",
+            "url" : "/",
+            "subMenu" : [
+                {
+                    "id" : 4,
+                    "title" : "subMenu3",
+                    "url" : "/",
+                    "subMenu" : []
+                }
+            ]
+        },
+        {
+            "id" : 3,
+            "title" : "메일",
+            "url" : "/",
+            "subMenu" : []
+        }
+    ]
+}

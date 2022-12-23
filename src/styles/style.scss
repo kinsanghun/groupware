@@ -1,0 +1,31 @@
+header {
+    position : relative;
+
+    nav {
+        padding : 30px;
+        background: rgb(232, 232, 232);
+        color : #1f1f1f;
+
+        ul {
+            padding-left : 10px;
+            
+            li {
+                margin : 16px;
+                cursor: pointer;
+                & > div {
+                    display: flex;
+                    align-items: center;
+                }
+                .arrow {
+                    margin-right : 10px;
+                    transition : 0.2s;
+                    font-size : 24px;
+                    color : orange;
+                    &.active {
+                        transform : rotate(90deg);
+                    }
+                }
+            }
+        }
+    }   
+}
