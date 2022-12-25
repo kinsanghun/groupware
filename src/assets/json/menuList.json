@@ -1,55 +1,34 @@
 {
     "menuList" : [
         {
-            "id" : 1,
-            "title" : "인사관리",
+            "id" : 100,
+            "title" : "홈으로",
             "url" : "/",
-            "subMenu" : [
-                {
-                    "id" : 1,
-                    "title" : "subMenu1",
-                    "url" : "/",
-                    "subMenu" : []
-                },
-                {
-                    "id" : 2,
-                    "title" : "subMenu2",
-                    "url" : "/",
-                    "subMenu" : []
-                },
-                {
-                    "id" : 3,
-                    "title" : "subMenu3",
-                    "url" : "/",
-                    "subMenu" : [
-                        {
-                            "id" : 2,
-                            "title" : "subMenu2",
-                            "url" : "/",
-                            "subMenu" : []
-                        }       
-                    ]
-                }
-            ]
+            "icon" : "BiHome"
         },
         {
-            "id" : 2,
+            "id" : 200,
             "title" : "전자결제",
-            "url" : "/",
-            "subMenu" : [
-                {
-                    "id" : 4,
-                    "title" : "subMenu3",
-                    "url" : "/",
-                    "subMenu" : []
-                }
-            ]
+            "url" : "/ep",
+            "icon" : "BiCabinet"
         },
         {
-            "id" : 3,
+            "id" : 300,
             "title" : "메일",
-            "url" : "/",
-            "subMenu" : []
+            "url" : "/mail",
+            "icon" : "BiEnvelope"
+        },
+        {
+            "id" : 400,
+            "title" : "일정공유",
+            "url" : "/calendar",
+            "icon" : "BiCalendar"
+        },
+        {
+            "id" : 500,
+            "title" : "근태관리",
+            "url" : "/workoutmanage",
+            "icon" : "BiQrScan"
         }
     ]
 }

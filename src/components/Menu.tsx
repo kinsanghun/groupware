@@ -1,26 +1,31 @@
-import { useState } from "react";
-import { navType } from "types/menu";
-import { IoMdArrowDropright } from "react-icons/io";
-import { BsDot } from "react-icons/bs";
-export const MenuItem = (props: { data: navType }) => {
+import { useContext } from "react";
+import { navIconType, navType } from "types/menu";
+import { MenuContext } from "App";
+import {
+    BiHome,
+    BiEnvelope,
+    BiCabinet,
+    BiCalendar,
+    BiQrScan
+} from 'react-icons/bi';
 
-    const [menuToggle, setMenuToggle] = useState(false);
-    const subItem: JSX.Element[] = props.data.subMenu.map(menu => <MenuItem key={menu.id} data={menu} />);
+export const MenuItem = (props: { data: navType }) => {
+    const context = useContext(MenuContext);
+    const menuIcons:navIconType = {
+        BiHome : <BiHome/>,
+        BiEnvelope : <BiEnvelope/>,
+        BiCabinet : <BiCabinet/>,
+        BiCalendar : <BiCalendar/>,
+        BiQrScan : <BiQrScan/>
+    }
 
     return (
-        <li>
-            <div onClick={() => { if (subItem.length > 0) setMenuToggle(prev => !prev) }}>
-
-                <span className={menuToggle ? "arrow active" : "arrow"}>
-                    {
-                        subItem.length > 0 ?
-                        <IoMdArrowDropright />
-                        : <BsDot />
-                    }
-                </span>
-                {props.data.title}
+        <>
+            <div className={context.view === props.data.url ? "active" : ""} onClick={() => {context.viewHandler(props.data.url)}}>
+                {menuIcons[props.data.icon]}
+                
             </div>
-            {menuToggle && subItem.length > 0 ? <ul>{subItem}</ul> : null}
-        </li>
+            <div className="tag">{props.data.title}</div>
+        </>
     )
 }

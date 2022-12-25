@@ -2,5 +2,8 @@ export type navType = {
     id : number,
     title : string,
     url : string,
-    subMenu : navType[],
+    icon : string
+}
+export type navIconType = {
+    [key:string]:JSX.Element
 }
