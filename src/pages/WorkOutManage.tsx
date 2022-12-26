@@ -1,6 +1,6 @@
 const WorkOutManage = () => {
     return (
-        <div>
+        <div className="container">
             <h1>근태관리</h1>
         </div>
     )

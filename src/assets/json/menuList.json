@@ -3,7 +3,7 @@
         {
             "id" : 100,
             "title" : "홈으로",
-            "url" : "/",
+            "url" : "/home",
             "icon" : "BiHome"
         },
         {

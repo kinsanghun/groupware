@@ -1,6 +1,6 @@
 const Mail = ():JSX.Element => {
     return (
-        <div>
+        <div className="container">
             <h1>Mail</h1>
         </div>
     )

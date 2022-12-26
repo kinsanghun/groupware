@@ -8,6 +8,7 @@ import {
     BiCalendar,
     BiQrScan
 } from 'react-icons/bi';
+import { IsLogin } from "api/LoginAPI";
 
 export const MenuItem = (props: { data: navType }) => {
     const context = useContext(MenuContext);
@@ -21,7 +22,13 @@ export const MenuItem = (props: { data: navType }) => {
 
     return (
         <>
-            <div className={context.view === props.data.url ? "active" : ""} onClick={() => {context.viewHandler(props.data.url)}}>
+            <div 
+                className={context.view === props.data.url ? "active" : ""} 
+                onClick={() => { 
+                    !IsLogin(context) ? 
+                    context.viewHandler(props.data.url) : 
+                    context.viewHandler("/login")
+                }}>
                 {menuIcons[props.data.icon]}
                 
             </div>

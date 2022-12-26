@@ -1,6 +1,6 @@
 const Calendar = () => {
     return (
-        <div>
+        <div className="container">
             <h1>Calendar</h1>
         </div>
     )
