@@ -31,11 +31,25 @@ header {
 
         ul {
             display: flex;
+            align-items: center;
             li {
                 margin-right : 40px;
                 cursor: pointer;
+                &:hover { color : darkgray; }
+            }
+            .info {
+                display: flex;
+                align-items: center;
+                img {
+                    width : 30px;
+                    height : 30px;
+                    border-radius: 50%;
+                    border: 0.5px solid gray;
+                    margin-right : 15px;
+                }
                 &:hover {
-                    color : darkgray;
+                    color : #1f1f1f;
+                    cursor: default;
                 }
             }
         }

@@ -24,8 +24,9 @@ $viewHeight : calc(100vh - 80px);
             line-height: 1.2;
         }
         img {
+            position: relative;
             margin-top : 60px;
-            width : 1000px;
+            width : 80%;
         }
         .description {
             font-size : 20px;

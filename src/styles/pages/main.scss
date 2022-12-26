@@ -1,0 +1,42 @@
+.join-group {
+    position : relative;
+    width : 100%;
+    height : 100%;
+    h2 {
+        font-size : 20px;
+        margin-bottom : 20px;
+    }
+
+    .flex-group {
+        display: flex;
+        .wrapper-group {
+            position : relative;
+            margin-top : 50px;
+            width : 600px;
+            margin : 0 auto;
+            display: flex;
+            flex-direction: column;
+            border-right: 0.5px solid rgba(128, 128, 128, 0.468);
+    
+            .wrapper {
+                width : 100%;
+                padding : 50px ;
+                
+                input {
+                    margin-bottom : 20px;
+                }
+            }
+        }
+        .content {
+            width : 100%;
+            padding : 50px;
+            ul {
+                padding : 0;
+                li {
+                    color : gray;
+                    margin-bottom : 8px;
+                }
+            }
+        }
+    }
+}

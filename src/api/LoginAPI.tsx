@@ -1,23 +1,13 @@
+import { groupType } from "types/group";
+
+export const accessTokenStorage = "access-token";
+
 export const Authentication = () => {
 
 }
 
 export const LoginProcess = () => {
     return;
-}
-
-export const IsLogin = (context:{view:string, viewHandler:Function}) => {
-    const allowURLs = [
-        "/login",
-        "/",
-    ]
-
-    if(!allowURLs.includes(context.view)) {
-        const accessToken = sessionStorage.getItem("access-token");
-        console.log(accessToken);
-        if(!accessToken) { return true; }
-    }
-    return false;
 }
 
 export const Logout = (context:{view:string, viewHandler:Function}) => {
@@ -27,7 +17,12 @@ export const Logout = (context:{view:string, viewHandler:Function}) => {
 }
 
 export const InfuseExampleAccessToken = (context:{view:string, viewHandler:Function}) => {
-    sessionStorage.setItem("access-token", "exmple-token");
+    const exampleToken:groupType = {
+        name : "Mr. Hong",
+        group : null,
+        token : "example-token"
+    }
+    sessionStorage.setItem("access-token", JSON.stringify(exampleToken));
     alert("Login Complete");
     context.viewHandler("/home");
 }
